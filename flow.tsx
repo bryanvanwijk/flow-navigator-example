@@ -13,7 +13,7 @@ interface AppContextValue {
 const AppContext = createContext<AppContextValue | null>(null);
 
 export const AppProvider = ({ children }: { children: ReactNode }) => {
-  const [step2Enabled, setStep2Enabled] = useState(true);
+  const [step2Enabled, setStep2Enabled] = useState(false);
 
   return (
     <AppContext.Provider value={{ step2Enabled, setStep2Enabled }}>
